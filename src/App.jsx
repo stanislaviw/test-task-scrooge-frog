@@ -1,10 +1,11 @@
 import "./App.css";
 import { Layout } from "./components/layout";
+import { List } from "./components/list";
 
 function App() {
   return (
     <Layout>
-      <div>lol</div>
+      <List />
     </Layout>
   );
 }
