@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   height: 5rem;
+  border-bottom: 2px solid #d8d8d8;;
 }
 
 .header_link {
@@ -20,7 +21,7 @@
 }
 
 .header_link:hover {
-  color: #A3ABB2;
+  color: #d8d8d8;
 }
 
 .main {
@@ -72,9 +73,25 @@
 }
 
 .list_item {
-  border: 1px solid #000;
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-radius: 1rem;
+  background:  #d8d8d8;
+}
+
+.list_item_title {
+  color: #000;
+}
+
+.list_item_title::first-letter {
+  text-transform: capitalize;
+}
+
+.list_item_text {
+  color: #000;
+}
+
+.list_item_text::first-letter {
+  text-transform: capitalize;
 }
 
 .button {
@@ -82,7 +99,7 @@
   cursor: pointer;
   border: 0;
   border-radius: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   color: #fff;
   font-weight: 700;
 }

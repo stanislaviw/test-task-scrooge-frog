@@ -24,14 +24,14 @@ export const Layout = ({ children }) => {
           <a
             target="_blank"
             className="footer_text footer_social_networks_text"
-            href={LINKEDIN_ACCOUNT}
+            href={GITHUB_ACCOUNT}
           >
             Github
           </a>
           <a
             target="_blank"
             className="footer_text footer_social_networks_text"
-            href={GITHUB_ACCOUNT}
+            href={LINKEDIN_ACCOUNT}
           >
             LinkedIn
           </a>
