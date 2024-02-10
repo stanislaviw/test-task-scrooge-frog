@@ -59,6 +59,7 @@
   flex-direction: column;
   gap: 1rem;
   height: 100%;
+  width: 100%;
 }
 
 .list_header {
@@ -69,6 +70,7 @@
 
 .list_items {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,6 +82,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 
 .list_footer {
@@ -91,10 +94,17 @@
   padding: 2rem 1rem;
   border-radius: 1rem;
   background:  #d8d8d8;
+  width: 100%;
+  overflow: hidden;
+  min-height: 8rem;
 }
 
 .list_item_title {
   color: #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .list_item_title::first-letter {
@@ -103,6 +113,7 @@
 
 .list_item_text {
   color: #000;
+  width: 100%;
 }
 
 .list_item_text::first-letter {
