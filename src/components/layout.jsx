@@ -11,28 +11,20 @@ export const Layout = ({ children }) => {
   return (
     <div className="container">
       <header className="header">
-        <a className="header_link" href="/">
+        <a className="link" href="/">
           Home
         </a>
-        <a className="header_link" href={GITHUB_REPOSITORIE} target="_blank">
+        <a className="link" href={GITHUB_REPOSITORIE} target="_blank">
           Repositorie
         </a>
       </header>
       <main className="main">{children}</main>
       <footer className="footer">
         <div className="footer_social_networks">
-          <a
-            target="_blank"
-            className="footer_text footer_social_networks_text"
-            href={GITHUB_ACCOUNT}
-          >
+          <a target="_blank" className="link" href={GITHUB_ACCOUNT}>
             Github
           </a>
-          <a
-            target="_blank"
-            className="footer_text footer_social_networks_text"
-            href={LINKEDIN_ACCOUNT}
-          >
+          <a target="_blank" className="link" href={LINKEDIN_ACCOUNT}>
             LinkedIn
           </a>
         </div>

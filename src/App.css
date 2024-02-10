@@ -13,15 +13,15 @@
   align-items: center;
   justify-content: space-between;
   height: 5rem;
-  border-bottom: 2px solid #d8d8d8;;
+  border-bottom: 2px solid #A3ABB2;
 }
 
-.header_link {
+.link {
   font-weight: 700;
 }
 
-.header_link:hover {
-  color: #d8d8d8;
+.link:hover {
+  color: #A3ABB2;
 }
 
 .main {
@@ -43,10 +43,6 @@
 .footer_social_networks {
   display: flex;
   gap: 1rem;
-}
-
-.footer_social_networks_text {
-  cursor: pointer;
 }
 
 .footer_text {

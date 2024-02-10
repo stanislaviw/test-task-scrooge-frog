@@ -2,11 +2,15 @@ import "./App.css";
 import { Layout } from "./components/layout";
 import { List } from "./components/list";
 
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
-    <Layout>
-      <List />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <List />
+      </Layout>
+    </BrowserRouter>
   );
 }
 
