@@ -4,7 +4,7 @@ import { Button } from "./common/button";
 import { ProgressBar } from "./common/progress-bar";
 import { Pagination } from "@mui/material";
 import { useGetPostsQuery } from "../redux/postsApi";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   PAGINATION_LIMIT_ITEMS,
   PAGINATION_LIMIT_PAGES,
@@ -15,10 +15,6 @@ export const List = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const navigate = useNavigate();
-  const location = useLocation();
-  const { pathname } = location;
-
-  console.log(pathname);
 
   const { data, isFetching, isLoading, isSuccess, isError, error } =
     useGetPostsQuery({
