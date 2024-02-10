@@ -4,7 +4,6 @@ import { Button } from "./common/button";
 import { ProgressBar } from "./common/progress-bar";
 import { Pagination } from "@mui/material";
 import { useGetPostsQuery } from "../redux/postsApi";
-import { useNavigate } from "react-router-dom";
 import {
   PAGINATION_LIMIT_ITEMS,
   PAGINATION_LIMIT_PAGES,
@@ -13,8 +12,6 @@ import {
 export const List = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-
-  const navigate = useNavigate();
 
   const { data, isFetching, isLoading, isSuccess, isError, error } =
     useGetPostsQuery({
@@ -30,7 +27,6 @@ export const List = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-    navigate("page=1");
   }, []);
 
   const handleUpdatePosts = () => {
@@ -39,7 +35,6 @@ export const List = () => {
 
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
-    navigate(`page=${page}`);
   };
 
   let content;
