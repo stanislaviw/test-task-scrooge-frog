@@ -4,19 +4,26 @@ import { Button } from "./common/button";
 import { ProgressBar } from "./common/progress-bar";
 import { Pagination } from "@mui/material";
 import { useGetPostsQuery } from "../redux/postsApi";
-import { useNavigate } from "react-router-dom";
-import { PAGINATION_LIMIT } from "../constants/constants";
+import { useNavigate, useLocation } from "react-router-dom";
+import {
+  PAGINATION_LIMIT_ITEMS,
+  PAGINATION_LIMIT_PAGES,
+} from "../constants/constants";
 
 export const List = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const { pathname } = location;
+
+  console.log(pathname);
 
   const { data, isFetching, isLoading, isSuccess, isError, error } =
     useGetPostsQuery({
       page: currentPage,
-      limit: PAGINATION_LIMIT,
+      limit: PAGINATION_LIMIT_ITEMS,
     });
 
   useEffect(() => {
@@ -55,7 +62,7 @@ export const List = () => {
           <Pagination
             onChange={handlePageChange}
             page={currentPage}
-            count={10}
+            count={PAGINATION_LIMIT_PAGES}
             color="primary"
             shape="rounded"
           />

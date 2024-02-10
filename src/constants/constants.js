@@ -4,4 +4,5 @@ export const GITHUB_REPOSITORIE =
   "https://github.com/stanislaviw/test-task-scrooge-frog";
 export const GITHUB_ACCOUNT = "https://github.com/stanislaviw";
 
-export const PAGINATION_LIMIT = 10;
+export const PAGINATION_LIMIT_ITEMS = 10;
+export const PAGINATION_LIMIT_PAGES = 10;

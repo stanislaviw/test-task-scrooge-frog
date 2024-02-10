@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
   return (
     <div className="container">
       <header className="header">
-        <a className="link" href="/">
+        <a className="link" href="/page=1">
           Home
         </a>
         <a className="link" href={GITHUB_REPOSITORIE} target="_blank">
