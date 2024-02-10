@@ -1,8 +1,30 @@
-# React + Vite
+# Test task for ScroogeFrog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requirements before starting
 
-Currently, two official plugins are available:
+Before starting this project, make sure you have the following tools installed on your computer:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js ^18.18.2
+- npm ^9.8.1
+
+## Installation
+
+To get started, clone this repository:
+
+```bash
+
+git clone https://github.com/stanislaviw/test-task-wtg.git
+
+```
+
+And follow these steps:
+
+```bash
+
+npm install
+
+npm run dev
+
+```
+
+## Technologies Vite, React, RTK Query, JavaScript, CSS, Material UI
