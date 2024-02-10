@@ -3,3 +3,5 @@ export const LINKEDIN_ACCOUNT =
 export const GITHUB_REPOSITORIE =
   "https://github.com/stanislaviw/test-task-scrooge-frog";
 export const GITHUB_ACCOUNT = "https://github.com/stanislaviw";
+
+export const PAGINATION_LIMIT = 10;

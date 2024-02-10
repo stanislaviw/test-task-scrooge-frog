@@ -139,3 +139,15 @@
   justify-content: center;
   width: 100%;
 }
+
+.placeholder {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: 600;
+  color: #176bc0;
+}
+
+.error {
+  color: #e9441b;
+}
