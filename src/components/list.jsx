@@ -13,7 +13,7 @@ export const List = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const { data, isFetching, isLoading, isSuccess, isError, error } =
+  const { data, isFetching, isLoading, isSuccess, isError, error, refetch } =
     useGetPostsQuery({
       page: currentPage,
       limit: PAGINATION_LIMIT_ITEMS,
@@ -29,29 +29,35 @@ export const List = () => {
     setCurrentPage(1);
   }, []);
 
-  const handleUpdatePosts = () => {
-    window.location.reload();
+  const handleUpdatePosts = async () => {
+    try {
+      await refetch();
+    } catch (error) {
+      console.error("Refetch Error", error);
+    }
   };
 
-  const handlePageChange = (event, page) => {
+  const handleChangePage = (event, page) => {
     setCurrentPage(page);
   };
 
-  let content;
+  let content = <div className="placeholder">No any post</div>;
 
   if (isFetching && isLoading) {
     content = <ProgressBar />;
-  } else if (!!posts && posts.length > 0) {
+  }
+
+  if (!!posts && posts.length > 0) {
     content = (
       <ul className="list_items">
         <div className="list_items_container">
-          {posts?.map((item) => (
+          {posts.map((item) => (
             <ListItem key={item.id} item={item} />
           ))}
         </div>
         <div className="list_footer">
           <Pagination
-            onChange={handlePageChange}
+            onChange={handleChangePage}
             page={currentPage}
             count={PAGINATION_LIMIT_PAGES}
             color="primary"
@@ -60,10 +66,10 @@ export const List = () => {
         </div>
       </ul>
     );
-  } else if (isError) {
+  }
+
+  if (isError) {
     content = <div className="error placeholder">Error: {error.message}</div>;
-  } else {
-    content = <div className="placeholder">No any post</div>;
   }
 
   return (

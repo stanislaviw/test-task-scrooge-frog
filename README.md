@@ -13,7 +13,7 @@ To get started, clone this repository:
 
 ```bash
 
-git clone https://github.com/stanislaviw/test-task-wtg.git
+git clone https://github.com/stanislaviw/test-task-scrooge-frog.git
 
 ```
 
